@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b2b">
+  <meta name="description" content="A luminous Diwali 2026 celebration with fireworks, diyas, rangoli, greetings, quiz and wishes.">
+  <meta property="og:title" content="Happy Diwali 2026 | Festival of Lights">
+  <meta property="og:description" content="Step into a magical digital celebration of Diwali.">
+  <meta property="og:type" content="website">
+  <title>Happy Diwali 2026 | Festival of Lights</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪔%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading celebration"><div class="loader-diya">🪔</div><span>Lighting the night</span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-particles" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Diwali 2026 home"><span class="brand-mark">ॐ</span><span>Deepavali <b>26</b></span></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#fireworks">Fireworks</a><a href="#diyas">Diyas</a><a href="#greeting">Greetings</a><a href="#rangoli">Rangoli</a><a href="#quiz">Quiz</a><a href="#wishes">Wishes</a>
+    </nav>
+    <button class="icon-button" id="motionToggle" type="button" aria-label="Pause decorative animations" title="Pause decorative animations">◌</button>
+  </header>
+
+  <main>
+    <section class="hero section-dark" id="home">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="lantern lantern-left" aria-hidden="true">✦</div><div class="lantern lantern-right" aria-hidden="true">✦</div>
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span></span> The Festival of Lights <span></span></p>
+        <h1>Happy <em>Diwali</em><br><span>2026</span></h1>
+        <p class="hero-subtitle">May the Festival of Lights Fill Your Life<br class="desktop-only"> With Happiness and Prosperity.</p>
+        <button class="button button-gold" data-scroll="#fireworks">Enter the Celebration <span>↗</span></button>
+      </div>
+      <div class="hero-diya diya-large" aria-label="Glowing diya illustration"><div class="flame"></div><div class="diya-bowl"></div><div class="diya-base"></div></div>
+      <div class="hero-diya diya-small diya-small-left" aria-hidden="true"><div class="flame"></div><div class="diya-bowl"></div></div><div class="hero-diya diya-small diya-small-right" aria-hidden="true"><div class="flame"></div><div class="diya-bowl"></div></div>
+      <div class="scroll-hint" aria-hidden="true"><span>Scroll to discover</span><i>↓</i></div>
+    </section>
+
+    <section class="section fireworks-section" id="fireworks">
+      <div class="section-heading reveal"><p class="eyebrow"><span></span> A sky full of wonder <span></span></p><h2>Light up the <em>night</em></h2><p>Every spark is a little wish. Click anywhere in the sky and make one of your own.</p></div>
+      <div class="fireworks-stage reveal"><canvas id="fireworksCanvas" aria-label="Interactive fireworks canvas"></canvas><div class="sky-label">Tap the sky<br><small>to launch a firework</small></div><div class="skyline" aria-hidden="true"></div></div>
+      <button class="button button-outline" id="grandFireworks" type="button">✦ Grand celebration</button>
+    </section>
+
+    <section class="section diyas-section section-dark" id="diyas">
+      <div class="section-heading reveal"><p class="eyebrow"><span></span> A little light <span></span></p><h2>Light the <em>diyas</em></h2><p>Kindle every flame to fill this corner with warmth.</p></div>
+      <div class="diya-grid" id="diyaGrid" aria-live="polite"></div>
+      <div class="diya-progress"><div class="progress-track"><span id="diyaProgress"></span></div><strong><span id="diyaCount">0</span> / 12 lit</strong><p id="diyaMessage">Click a diya to light it</p></div>
+    </section>
+
+    <section class="section greeting-section" id="greeting">
+      <div class="split-layout"><div class="section-heading reveal"><p class="eyebrow"><span></span> Made for someone special <span></span></p><h2>Send a little <em>light</em></h2><p>Turn your warmest wishes into a message worth keeping.</p></div>
+        <div class="tool-panel greeting-panel reveal"><label for="guestName">Their name</label><input id="guestName" maxlength="40" placeholder="e.g. Ananya" autocomplete="name"><div class="style-pills" role="group" aria-label="Greeting style"><button class="pill active" data-style="warm" type="button">Warm & bright</button><button class="pill" data-style="poetic" type="button">Poetic</button><button class="pill" data-style="playful" type="button">Playful</button></div><div class="greeting-card" id="greetingCard"><span class="card-spark">✦</span><p class="card-kicker">A Diwali wish for</p><h3 id="greetingTitle">Someone wonderful</h3><p id="greetingText">May your home glow with joy, your heart dance with hope, and the year ahead sparkle with beautiful beginnings.</p><span class="card-spark bottom">✦</span></div><div class="panel-actions"><button class="button button-gold" id="generateGreeting" type="button">Create greeting</button><button class="button button-soft" id="shareGreeting" type="button">⌯ Share</button></div><span class="copy-status" id="copyStatus" role="status"></span></div>
+      </div>
+    </section>
+
+    <section class="section rangoli-section section-dark" id="rangoli">
+      <div class="split-layout rangoli-layout"><div class="section-heading reveal"><p class="eyebrow"><span></span> Draw your own tradition <span></span></p><h2>Make a <em>rangoli</em></h2><p>Build a pattern from color, rhythm and a little imagination.</p><div class="rangoli-controls"><div class="control-row"><span>Colors</span><div class="swatches" id="swatches"><button class="swatch active" data-color="#ffd700" style="--swatch:#ffd700" aria-label="Gold"></button><button class="swatch" data-color="#ff5e7a" style="--swatch:#ff5e7a" aria-label="Pink"></button><button class="swatch" data-color="#54d8ff" style="--swatch:#54d8ff" aria-label="Blue"></button><button class="swatch" data-color="#a8e063" style="--swatch:#a8e063" aria-label="Green"></button><button class="swatch" data-color="#ff8c00" style="--swatch:#ff8c00" aria-label="Orange"></button></div></div><label class="range-row">Brush size <input id="brushSize" type="range" min="2" max="18" value="6"><output id="brushOutput">6</output></label><div class="panel-actions"><button class="button button-outline" id="clearRangoli" type="button">Clear</button><button class="button button-gold" id="randomRangoli" type="button">✦ Surprise pattern</button></div></div></div><div class="rangoli-frame reveal"><canvas id="rangoliCanvas" aria-label="Interactive rangoli drawing canvas"></canvas><span class="rangoli-ring ring-one"></span><span class="rangoli-ring ring-two"></span></div></div>
+    </section>
+
+    <section class="section quiz-section" id="quiz"><div class="section-heading reveal"><p class="eyebrow"><span></span> How bright is your knowledge? <span></span></p><h2>The Diwali <em>quiz</em></h2><p>Ten questions, one luminous score.</p></div><div class="quiz-card reveal" id="quizCard"><div class="quiz-top"><span id="quizNumber">Question 1 / 10</span><div class="quiz-progress"><span id="quizProgress"></span></div><span id="quizScore">0 pts</span></div><h3 id="quizQuestion"></h3><div class="answers" id="quizAnswers"></div><p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p><button class="button button-gold next-button" id="nextQuestion" type="button" disabled>Next question <span>→</span></button></div></section>
+
+    <section class="section gift-section section-dark" id="gift"><div class="gift-copy reveal"><p class="eyebrow"><span></span> A surprise from the heart <span></span></p><h2>Open your <em>good fortune</em></h2><p>There is a little Diwali wish waiting just for you.</p></div><button class="gift-box reveal" id="giftBox" type="button" aria-label="Open surprise gift"><span class="gift-lid"></span><span class="gift-body"><i></i></span><span class="gift-bow">✦</span></button><div class="gift-wish" id="giftWish" aria-live="polite"></div></section>
+
+    <section class="section wishes-section" id="wishes"><div class="section-heading reveal"><p class="eyebrow"><span></span> Leave a little light behind <span></span></p><h2>The Diwali <em>wish wall</em></h2><p>Write a wish for the year ahead. It stays on this device, just for you.</p></div><div class="wish-layout"><form class="wish-form tool-panel reveal" id="wishForm"><label for="wishName">Your name</label><input id="wishName" maxlength="32" required placeholder="Your name"><label for="wishText">Your Diwali wish</label><textarea id="wishText" maxlength="160" rows="4" required placeholder="May this year bring..."></textarea><button class="button button-gold" type="submit">Pin my wish ✦</button><small>Stored locally in your browser. Not shared publicly or across devices.</small></form><div class="wish-wall reveal" id="wishWall" aria-live="polite"></div></div></section>
+  </main>
+
+  <footer class="site-footer section-dark"><div class="footer-brand">🪔 <strong>Deepavali 26</strong><p>May every home find its light.</p></div><p class="made">Made with <span>♥</span> for Diwali 2026</p><div class="footer-actions"><button class="icon-button" id="musicToggle" type="button" aria-label="Play festival music">♫</button><label class="volume-label" for="volumeControl">Volume <input id="volumeControl" type="range" min="0" max="1" step="0.05" value="0.35"></label><button class="back-top" data-scroll="#home" type="button">Back to top ↑</button></div><div class="music-status" id="musicStatus" role="status">Music is off</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
